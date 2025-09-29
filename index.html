@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Cubing Club - Cube Enthusiast Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span><a href="#" style="color: #fff; text-decoration: none;">Bangladesh Cubing Club</a></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="tournaments">Tournaments</a></li>
+                <li><a href="#" class="nav-link" data-page="showcase">Showcase</a></li>
+                <li><a href="#" class="nav-link" data-page="cubes">Cubes</a></li>
+                <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                <li>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." id="search-input">
+                        <button><i class="fas fa-search"></i></button>
+                        <div class="search-results" id="search-results"></div>
+                    </div>
+                </li>
+                <li><a href="https://www.facebook.com/profile.php?id=61563889635662"><i class="fab fa-facebook"></i></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="page-content active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to Bangladesh Cubing Club</h1>
+                <p>Your ultimate destination for cube competitions, showcases, and the latest cube technology. Join our
+                    community of speedcubing enthusiasts!</p>
+                <a href="#tournaments" class="btn">Explore Tournaments</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Our Categories</h2>
+                <div class="category-grid">
+                    <!-- Tournament Category -->
+                    <div class="category-card">
+                        <div class="category-img">
+                            <img src="images/cubes.jpeg" alt="Tournament">
+                        </div>
+                        <div class="category-content">
+                            <h3>Tournaments</h3>
+                            <p>Discover upcoming cube competitions, results, and event details from around the world.
+                            </p>
+                            <a href="#" class="btn nav-link" data-page="tournaments">View Tournaments</a>
+                        </div>
+                    </div>
+
+                    <!-- Showcase Category -->
+                    <div class="category-card">
+                        <div class="category-img">
+                            <img src="images/cube2.jpg" alt="Showcase">
+                        </div>
+                        <div class="category-content">
+                            <h3>Showcase</h3>
+                            <p>Explore amazing cube collections, custom modifications, and artistic cube designs.</p>
+                            <a href="#" class="btn nav-link" data-page="showcase">View Gallery</a>
+                        </div>
+                    </div>
+
+                    <!-- Cubes Category -->
+                    <div class="category-card">
+                        <div class="category-img">
+                            <img src="images/cube3.jpg" alt="Cubes">
+                        </div>
+                        <div class="category-content">
+                            <h3>Cubes We Use</h3>
+                            <p>Learn about the best speedcubes, their features, specifications, and performance metrics.
+                            </p>
+                            <a href="#" class="btn nav-link" data-page="cubes">Explore Cubes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tournament Sections -->
+        <section class="tournament-sections">
+            <div class="container">
+                <!-- Upcoming Tournament -->
+                <div class="tournament-section">
+                    <h2 class="section-title">Upcoming Tournament</h2>
+                    <div id="upcoming-tournament-home" class="tournament-card-home">
+                        <!-- Content will be loaded from CSV -->
+                    </div>
+                </div>
+
+                <!-- Previous Tournament -->
+                <div class="tournament-section">
+                    <h2 class="section-title">Previous Tournament</h2>
+                    <div id="previous-tournament-home" class="tournament-card-home">
+                        <!-- Content will be loaded from CSV -->
+                    </div>
+                    <div class="see-all">
+                        <a href="#" class="btn btn-secondary nav-link" data-page="tournaments">See All Previous
+                            Tournaments</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Homepage Cubes Section -->
+        <section class="home-cubes">
+            <div class="container">
+                <h2 class="section-title">Cubes We Use</h2>
+                <div id="home-cubes-grid" class="home-cubes-grid">
+                    <!-- Content will be loaded from CSV -->
+                </div>
+                <div class="see-all">
+                    <a href="#" class="btn btn-secondary nav-link" data-page="cubes">View All Cubes</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Tournaments Page -->
+    <section id="tournaments" class="page-content">
+        <div class="container">
+            <h2 class="section-title">Tournaments</h2>
+
+            <div class="tournament-tabs">
+                <button class="tab-btn active" data-tab="upcoming">Upcoming Tournaments</button>
+                <button class="tab-btn" data-tab="previous">Previous Tournaments</button>
+            </div>
+
+            <div class="tab-content active" id="upcoming-tab">
+                <div id="upcoming-tournaments" class="tournament-list">
+                    <!-- Content will be loaded from CSV -->
+                </div>
+            </div>
+
+            <div class="tab-content" id="previous-tab">
+                <div id="previous-tournaments" class="tournament-list">
+                    <!-- Content will be loaded from CSV -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Page -->
+    <section id="showcase" class="page-content">
+        <div class="container">
+            <h2 class="section-title">Cube Showcase</h2>
+            <div id="showcase-grid" class="showcase-grid">
+                <!-- Content will be loaded from CSV -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cubes Page -->
+    <section id="cubes" class="page-content">
+        <div class="container">
+            <h2 class="section-title">Cubes We Use</h2>
+            <div id="cubes-grid" class="cubes-grid">
+                <!-- Content will be loaded from CSV -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page-content">
+        <div class="container">
+            <h2 class="section-title">About Bangladesh Cubing Club</h2>
+            <div
+                style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <p>Bangladesh Cubing Club (BCC) is a community-driven platform for cube enthusiasts worldwide. We
+                    provide tournament
+                    information, cube reviews, and a showcase for amazing cube collections.</p>
+
+                <h3 style="margin: 1.5rem 0 1rem; color: var(--secondary);">Our Mission</h3>
+                <p>To connect cube enthusiasts from around the world, promote the sport of speedcubing, and provide a
+                    comprehensive resource for everything related to cubes.</p>
+
+                <h3 style="margin: 1.5rem 0 1rem; color: var(--secondary);">What We Offer</h3>
+                <ul style="margin-left: 1.5rem;">
+                    <li>Comprehensive tournament listings and results</li>
+                    <li>Showcase of amazing cube collections and modifications</li>
+                    <li>Detailed reviews of the latest speedcubes</li>
+                    <li>Community forums and discussion boards</li>
+                    <li>Learning resources for beginners to advanced cubers</li>
+                </ul>
+
+                <h3 style="margin: 1.5rem 0 1rem; color: var(--secondary);">Contact Us</h3>
+                <p>Email: mdmashiurrahman302@gmail.com</p>
+                <p>Phone: +8801626602461</p>
+                <p>Address: Palashtoli road, Tangail</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Bangladesh Cubing Club</h3>
+                    <p>Bangladesh Cubing Club is a community-driven platform for cube enthusiasts worldwide. We provide
+                        tournament
+                        information, cube reviews, and a showcase for amazing cube collections.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61563889635662"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@XmanCuber"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="tournaments">Tournaments</a></li>
+                        <li><a href="#" class="nav-link" data-page="showcase">Showcase</a></li>
+                        <li><a href="#" class="nav-link" data-page="cubes">Cubes</a></li>
+                        <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> mdmashiurrahman302@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +8801626602461</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Palashtali Road, Tangail</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 BCC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Image Lightbox -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <!-- Modal for Gallery -->
+    <div id="galleryModal" class="gallery-modal">
+        <span class="close" id="closeGallery">&times;</span>
+        <div class="gallery-modal-content">
+            <h2 class="gallery-modal-title" id="galleryModalTitle">Event Gallery</h2>
+            <div class="gallery-modal-grid" id="galleryModalGrid">
+                <!-- Gallery images will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
