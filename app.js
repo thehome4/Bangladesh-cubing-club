@@ -1,4 +1,3 @@
-// Updated CSV URLs
 const CSV_URLS = {
     showcase: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQSuzhY51aldmUgKsL_lTPlv2LeG1ALUMEKkqBhT6uAiDQBNjgWqhgwtMmBtmM7U5NWrGbb0xZEqD75/pub?gid=0&single=true&output=csv',
     upcoming_tournaments: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS-TBbZalXXTgH9x0pQHsWDnGiNXi4bxfI0EYG0BhUs3HzWv02JYJFVL6-kHrG3KQbZaMzYTk4wqkAp/pub?gid=0&single=true&output=csv',
@@ -31,7 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 nav.classList.remove('active');
             });
             this.classList.add('active');
+            
+            // Close mobile menu if open
+            document.querySelector('.nav-links').classList.remove('active');
         });
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
     });
 
     // Tab functionality for tournaments page
